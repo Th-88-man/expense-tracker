@@ -1,0 +1,328 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  color: #111827;
+}
+
+.app-subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* ---------- Summary ---------- */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.summary-card {
+  background: white;
+  padding: 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.summary-card.highlight {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+}
+
+.summary-label {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.summary-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* ---------- Layout ---------- */
+.main-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ---------- Form ---------- */
+.expense-form {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.expense-form h2 {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.15s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 0.75rem;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.15s;
+}
+
+.btn-primary:hover {
+  background: #4f46e5;
+}
+
+.btn-danger {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.btn-danger:hover {
+  background: #fef2f2;
+}
+
+/* ---------- List ---------- */
+.expense-list-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.list-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.list-controls input,
+.list-controls select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 150px;
+}
+
+.expense-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #f3f4f6;
+  transition: background 0.15s;
+}
+
+.expense-item:hover {
+  background: #fafafa;
+}
+
+.expense-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.category-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #6b7280;
+}
+
+.category-food { background: #ef4444; }
+.category-transport { background: #3b82f6; }
+.category-shopping { background: #a855f7; }
+.category-bills { background: #f59e0b; }
+.category-entertainment { background: #ec4899; }
+.category-health { background: #10b981; }
+.category-other { background: #6b7280; }
+
+.expense-title {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.expense-meta {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.expense-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.expense-amount {
+  font-weight: 600;
+  color: #111827;
+}
+
+.btn-delete {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 0 0.25rem;
+  transition: color 0.15s;
+}
+
+.btn-delete:hover {
+  color: #dc2626;
+}
+
+/* ---------- Category Chart ---------- */
+.category-chart {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.category-chart h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.category-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.category-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  color: #4b5563;
+}
+
+.category-bar-track {
+  height: 8px;
+  background: #f3f4f6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.category-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+/* ---------- Misc ---------- */
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+}
+
+.empty-subtitle {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #9ca3af;
+}
+
+.app-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
